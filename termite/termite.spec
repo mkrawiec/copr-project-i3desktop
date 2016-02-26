@@ -1,12 +1,12 @@
 Name:           termite
-Version:        11
+Version: 11
 Release:        1%{?dist}
 Summary:        Terminal emulator based on GTK and VTE
 
 Group:          User Interface/X
 License:        GPLv2
 URL:            https://github.com/thestinger/termite
-Source0:        termite.tar.gz
+Source0:        %{name}-%{version}.tar.gz
 
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
@@ -24,6 +24,11 @@ the "select text" features utilized by termite.
 %prep
 %autosetup
 
+# Generate debug symbols
+sed -i -e 's/-O3/-O3 -g/g' Makefile
+
+# Do not strip output file
+sed -i -e 's/LDFLAGS := -s/LDFLAGS :=/g' Makefile
 
 %build
 make VERBOSE=1 %{?_smp_mflags}
