@@ -1,5 +1,5 @@
 Name:           i3-gaps
-Version: 4.11
+Version: 4.11.20160228gitfdbe3c
 Release:        1%{?dist}
 Summary:        i3 with more features
 License:        BSD
@@ -28,6 +28,7 @@ BuildRequires:  xcb-util-keysyms-devel
 BuildRequires:  xcb-util-wm-devel
 BuildRequires:  xmlto
 BuildRequires:  yajl-devel
+BuildRequires:  git
 
 Requires:       perl(:MODULE_COMPAT_%(eval "`perl -V:version`"; echo $version))
 Requires:       xorg-x11-fonts-misc
@@ -69,9 +70,6 @@ sed -i -e 's|LDFLAGS ?=|override LDFLAGS +=|g' \
        -e 's|INSTALL=.*|INSTALL=install -p|g' \
        common.mk
 
-echo '%{version} (2015-09-30, branch \"%{version}\")' > I3_VERSION
-echo '%{version}' > VERSION
-
 
 %build
 %make_build CFLAGS="%{optflags}" LDFLAGS="%{?__global_ldflags}" V=1
@@ -95,7 +93,7 @@ install -Dpm0644 %{SOURCE1} \
 
 
 %files
-%doc RELEASE-NOTES-%{version}
+%doc RELEASE-NOTES-*
 %license LICENSE
 %{_bindir}/i3*
 %{_includedir}/i3/
