@@ -1,7 +1,7 @@
 %global apiver 2.91
 
 Name:           vte3-ng
-Version: 0.42.4
+Version: 0.44.1
 Release:        1%{?dist}
 Summary:        Terminal emulator library
 
@@ -23,9 +23,10 @@ BuildRequires:  vala-tools
 Requires:       initscripts
 Requires:       vte-profile
 
-Provides:       vte291 = %{version}-%{release}
-Conflicts:      vte291
+Provides: vte291 = %{version}-%{release}
+Provides: vte291%{?_isa} = %{version}-%{release}
 
+Conflicts: vte291%{?_isa}
 
 %description
 VTE is a library implementing a terminal emulator widget for GTK+. VTE
