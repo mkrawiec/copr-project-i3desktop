@@ -1,5 +1,5 @@
 Name:           i3-gaps
-Version: 4.11.20160228gitfdbe3c
+Version: 4.12.20160416git660d09
 Release:        1%{?dist}
 Summary:        i3 with more features
 License:        BSD
@@ -33,7 +33,9 @@ BuildRequires:  git
 Requires:       perl(:MODULE_COMPAT_%(eval "`perl -V:version`"; echo $version))
 Requires:       xorg-x11-fonts-misc
 
-Conflicts:      i3
+
+Conflicts:      otherproviders(i3)
+Provides:       i3 = %{version}
 
 
 %description

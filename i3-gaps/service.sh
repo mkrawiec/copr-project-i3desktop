@@ -1,4 +1,4 @@
-PKG_VERSION=4.11.$(date +%Y%m%d)gitfdbe3c
+PKG_VERSION=4.12.$(date +%Y%m%d)git660d09
 PKG_BRANCH=gaps
 
 pkg_service_hook()
