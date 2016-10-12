@@ -1,4 +1,4 @@
-PKG_VERSION=11
+PKG_VERSION=12
 
 pkg_service_hook()
 {

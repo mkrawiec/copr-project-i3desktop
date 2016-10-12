@@ -1,5 +1,5 @@
 Name:           i3-gaps
-Version: 4.12.20160416git660d09
+Version: 4.12
 Release:        1%{?dist}
 Summary:        i3 with more features
 License:        BSD
@@ -18,6 +18,7 @@ BuildRequires:  libxkbcommon-x11-devel
 BuildRequires:  libxkbfile-devel
 BuildRequires:  pango-devel
 BuildRequires:  pcre-devel
+BuildRequires:  perl-generators
 BuildRequires:  perl(Getopt::Long)
 BuildRequires:  perl(Data::Dumper::Names)
 BuildRequires:  startup-notification-devel

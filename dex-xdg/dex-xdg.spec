@@ -1,5 +1,5 @@
 Name:           dex-xdg
-Version: 0.8.20160310gitfdbe3c
+Version: 0.8.20161012git9f186d
 Release:        1%{?dist}
 Summary:        DesktopEntry Execution
 

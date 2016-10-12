@@ -3,3 +3,5 @@
 !*/*.spec
 !*/service.sh
 !*/.gitignore
+
+!*/*.svg

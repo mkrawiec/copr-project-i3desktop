@@ -1,5 +1,5 @@
 Name:           termite
-Version: 11
+Version: 12
 Release:        1%{?dist}
 Summary:        Terminal emulator based on GTK and VTE
 

@@ -1,4 +1,4 @@
-PKG_VERSION=0.1.$(date +%Y%m%d)gitd7f95b
+PKG_VERSION=0.1.$(date +%Y%m%d)gitb7f43e
 
 pkg_service_hook()
 {

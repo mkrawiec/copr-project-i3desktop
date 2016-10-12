@@ -1,7 +1,7 @@
 %global apiver 2.91
 
 Name:           vte3-ng
-Version: 0.44.1
+Version: 0.46.0
 Release:        1%{?dist}
 Summary:        Terminal emulator library
 
